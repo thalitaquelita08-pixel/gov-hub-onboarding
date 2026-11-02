@@ -83,6 +83,8 @@ hooks:
   - material/overrides/hooks/copy_index.py
   - material/overrides/hooks/publicacoes_cards.py
   - material/overrides/hooks/caminho_base.py
+  # só no `mkdocs serve`: no deploy a capacitação é copiada pelo deploy.yml
+  - material/overrides/hooks/capacitacao_local.py
 
 # Additional configuration
 extra:
