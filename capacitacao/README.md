@@ -80,7 +80,7 @@ Dashboards-Roadmap/
 ├── CONTRIBUTING.md              como contribuir
 ├── index.html                   página inicial: apresentação, login e catálogo de trilhas
 ├── trilhas.html                 endereço antigo do catálogo, só redireciona
-├── mapa.html                    mapa de uma trilha (?trilha=<slug>), um nível por vez
+├── mapa.html                    mapa de uma trilha (?trilha=<slug>): visão geral e uma tela por nível (#nivel-N)
 ├── doc.html                     página da aula (Markdown), por trilha
 ├── quiz.html                    quiz de revisão (?trilha=<slug>), liberado ao concluir a trilha
 ├── concluida.html · roadmap.html   endereços antigos, só redirecionam

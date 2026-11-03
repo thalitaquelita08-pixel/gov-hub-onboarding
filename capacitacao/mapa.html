@@ -12,16 +12,25 @@
 <title>Mapa da trilha · Gov Hub</title>
 </head>
 <body>
-<a class="pular" href="#painel">Pular para a trilha</a>
+<a class="pular" href="#principal">Pular para a trilha</a>
 <header class="site" id="topo"></header>
 
-<main id="principal">
+<main id="principal" tabindex="-1">
+<!-- ============ Visão geral: progresso, trilha vertical e todas as aulas ============ -->
+<div class="view" id="visao-geral">
   <section class="hero">
     <div class="hero-inner">
       <div class="eyebrow">Trilha</div>
       <h1 id="trilha-titulo">Carregando…</h1>
       <p id="trilha-chamada"></p>
-      <a class="btn-pdf btn-pdf--hero" id="trilha-pdf" href="#" download hidden></a>
+      <div class="hero-acoes">
+        <a class="btn-primario btn-grande" id="cta" href="#" hidden><span id="cta-texto"></span></a>
+        <a class="btn-pdf btn-pdf--hero" id="trilha-pdf" href="#" download hidden></a>
+      </div>
+      <div class="ringcard" id="anel" aria-live="polite" hidden>
+        <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="52" fill="none" stroke-width="12"/><circle class="arc" id="anel-arco" cx="60" cy="60" r="52" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="326.73"/></svg><span class="v" id="anel-pct">0%</span></div>
+        <div class="ringtxt"><b>da trilha feita</b><span id="anel-aulas"></span><span id="anel-niveis"></span></div>
+      </div>
     </div>
   </section>
 
@@ -40,30 +49,52 @@
     </div>
   </section>
 
-  <div class="progress-bar-wrap">
-    <span class="progress-count" id="progresso-texto">Carregando…</span>
-    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progresso-barra"></div></div>
-    <button class="btn-reset" id="limpar" type="button">limpar progresso</button>
-  </div>
-
   <a href="#" class="trail-quiz-banner" id="banner-quiz" hidden>
     <span class="trail-quiz-banner-text"><strong>Você concluiu toda a trilha.</strong> Revise o que aprendeu no quiz final.</span>
     <span class="trail-quiz-banner-cta">Fazer o quiz de revisão →</span>
   </a>
 
-  <div class="legend">
-    <span class="legend-item"><span class="legend-dot"></span> Essencial</span>
-    <span class="legend-item"><span class="legend-dot outline"></span> Apoio / opcional</span>
-    <span class="legend-item"><span class="legend-dot rose"></span> Marco</span>
-  </div>
+  <section class="bloco" aria-labelledby="trilha-sec-titulo">
+    <p class="kicker">Sua trilha</p>
+    <h2 class="bloco-titulo" id="trilha-sec-titulo">Os níveis, <em>no seu ritmo</em></h2>
+    <p class="bloco-intro">A ordem sugerida vai dos fundamentos à prática. Você pode abrir qualquer nível a qualquer momento e voltar quando precisar.</p>
+    <ol class="trail" id="trilha-niveis"></ol>
+  </section>
 
-  <div class="layout">
-    <nav class="trail-nav" aria-labelledby="niveis-titulo">
-      <div class="trail-nav-title" id="niveis-titulo">Níveis da trilha</div>
-      <ol id="niveis"></ol>
-    </nav>
-    <div class="main-panel" id="painel" tabindex="-1"></div>
-  </div>
+  <section class="bloco bloco-alt" aria-labelledby="aulas-sec-titulo">
+    <div class="bloco-in">
+      <p class="kicker">Todas as aulas</p>
+      <h2 class="bloco-titulo" id="aulas-sec-titulo">Tudo o que falta, <em>num lugar só</em></h2>
+      <p class="bloco-intro">As mesmas aulas dos níveis, reunidas para você marcar daqui mesmo.</p>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-dot"></span> Essencial</span>
+        <span class="legend-item"><span class="legend-dot outline"></span> Apoio / opcional</span>
+        <span class="legend-item"><span class="legend-dot rose"></span> Marco</span>
+      </div>
+      <div class="checklist" id="checklist"></div>
+      <p class="done-msg" id="concluida-msg" hidden>Trilha concluída. Você pode voltar aqui como referência sempre que precisar.</p>
+      <div class="limpar-linha"><button class="btn-reset" id="limpar" type="button">limpar progresso</button></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ Um nível: aulas como tarefas e navegação anterior/próximo ============ -->
+<div class="view" id="tela-nivel" hidden>
+  <section class="stephead">
+    <div class="bloco-in">
+      <a class="btn-link voltar" href="#" id="voltar-geral"></a>
+      <nav class="crumbs" id="migalhas" aria-label="Níveis da trilha"></nav>
+      <p class="kicker" id="nivel-kicker"></p>
+      <div class="nivel-topo">
+        <span class="panel-icon" id="nivel-icone" hidden></span>
+        <h1 id="nivel-titulo" tabindex="-1"></h1>
+      </div>
+      <p class="nivel-desc" id="nivel-desc"></p>
+      <div class="taskbox" id="tarefas"></div>
+      <nav class="pager" id="paginador" aria-label="Outros níveis"></nav>
+    </div>
+  </section>
+</div>
 </main>
 
 <div class="modal-overlay" id="confirmar" hidden>

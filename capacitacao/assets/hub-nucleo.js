@@ -10,6 +10,26 @@ export function nivelPadrao(feitos, niveis) {
 // Nível anunciado, ainda sem aulas (`Status: em-breve` em trilhas/<slug>.md).
 export const emBreve = (nivel) => nivel.status === 'em-breve';
 
+// Situação de um nível na trilha da visão geral: em-breve, concluido, andamento ou nao-iniciado.
+export function statusDoNivel(feitos, nivel) {
+  if (emBreve(nivel)) return 'em-breve';
+  const n = nivel.itens.filter((i) => feitos[i.id]).length;
+  if (nivel.itens.length && n === nivel.itens.length) return 'concluido';
+  return n ? 'andamento' : 'nao-iniciado';
+}
+
+// Botão principal da visão geral: começar (nada feito), continuar no primeiro nível pendente,
+// ou rever (tudo feito). `numero` é o nível para onde o botão leva.
+export function chamadaDaTrilha(feitos, niveis) {
+  const abertos = niveis.filter((n) => !emBreve(n));
+  const algumaFeita = abertos.some((n) => n.itens.some((i) => feitos[i.id]));
+  const pendente = abertos.find((n) => n.itens.some((i) => !feitos[i.id]));
+  const primeiro = abertos[0] || niveis[0];
+  if (!algumaFeita) return { acao: 'comecar', numero: primeiro ? primeiro.numero : 0 };
+  if (pendente) return { acao: 'continuar', numero: pendente.numero };
+  return { acao: 'rever', numero: primeiro ? primeiro.numero : 0 };
+}
+
 // Os cinco papéis da trilha viram três marcações no mapa: essencial, apoio e marco.
 export function papelVisual(papel) {
   if (papel === 'core') return 'essencial';

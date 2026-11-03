@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { nivelPadrao, papelVisual, buscarAulas, corrigirQuiz, perguntasDaTrilha, normalizarBusca, niveisConcluidos, pdfDaAula, pdfDaTrilha } from '../assets/hub-nucleo.js';
+import { nivelPadrao, papelVisual, buscarAulas, corrigirQuiz, perguntasDaTrilha, normalizarBusca, niveisConcluidos, pdfDaAula, pdfDaTrilha, statusDoNivel, chamadaDaTrilha } from '../assets/hub-nucleo.js';
 
 const NIVEIS = [
   { numero: 0, titulo: 'Base', itens: [{ id: 'a', titulo: 'Por que fazer um dashboard?', doc: 'docs/a.md' }, { id: 'b', titulo: 'Glossário', doc: 'docs/b.md' }] },
@@ -65,4 +65,19 @@ test('nível em breve: não conta no andamento nem é aberto por padrão', () =>
   assert.deepEqual(niveisConcluidos({ a: true, b: true, c: true }, COM_EM_BREVE), { feitos: 2, total: 2, percentual: 100 });
   assert.equal(nivelPadrao({ a: true, b: true, c: true }, COM_EM_BREVE), 0);
   assert.equal(nivelPadrao({ a: true, b: true }, COM_EM_BREVE), 1);
+});
+
+test('statusDoNivel: não iniciado, em andamento, concluído e em breve', () => {
+  assert.equal(statusDoNivel({}, NIVEIS[0]), 'nao-iniciado');
+  assert.equal(statusDoNivel({ a: true }, NIVEIS[0]), 'andamento');
+  assert.equal(statusDoNivel({ a: true, b: true }, NIVEIS[0]), 'concluido');
+  assert.equal(statusDoNivel({ a: true, b: true, c: true }, COM_EM_BREVE[2]), 'em-breve');
+});
+
+test('chamadaDaTrilha: começar, continuar no primeiro nível pendente e rever no fim', () => {
+  assert.deepEqual(chamadaDaTrilha({}, COM_EM_BREVE), { acao: 'comecar', numero: 0 });
+  assert.deepEqual(chamadaDaTrilha({ c: true }, COM_EM_BREVE), { acao: 'continuar', numero: 0 });
+  assert.deepEqual(chamadaDaTrilha({ a: true, b: true }, COM_EM_BREVE), { acao: 'continuar', numero: 1 });
+  assert.deepEqual(chamadaDaTrilha({ a: true, b: true, c: true }, COM_EM_BREVE), { acao: 'rever', numero: 0 });
+  assert.deepEqual(chamadaDaTrilha({}, []), { acao: 'comecar', numero: 0 });
 });
