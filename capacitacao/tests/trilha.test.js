@@ -8,6 +8,7 @@ const catalogo = {
     { slug: 'dashboards', aulas: ['explicacao/b', 'explicacao/comum'] },
     { slug: 'zeta', aulas: ['explicacao/z', 'explicacao/so-em-duas'] },
     { slug: 'omega', aulas: ['explicacao/so-em-duas'] },
+    { slug: 'onboarding', aulas: ['onboarding/boas-vindas'] },
   ],
 };
 
@@ -45,12 +46,12 @@ test('trilhaParaDoc: fora de dashboards, a primeira trilha (ordem do catálogo) 
   assert.equal(trilhaParaDoc(catalogo, 'explicacao/so-em-duas', 'omega'), 'omega');
 });
 
-test('trilhaParaDoc: doc em nenhuma trilha (ex.: docs/index.md) vai para a preferida, senão dashboards, senão a primeira', () => {
-  assert.equal(trilhaParaDoc(catalogo, 'index'), 'dashboards');
+test('trilhaParaDoc: doc em nenhuma trilha (ex.: docs/index.md) vai para a preferida, senão onboarding, senão a primeira', () => {
+  assert.equal(trilhaParaDoc(catalogo, 'index'), 'onboarding');
   assert.equal(trilhaParaDoc(catalogo, 'index', 'zeta'), 'zeta');
-  assert.equal(trilhaParaDoc(catalogo, 'index', 'nao-existe'), 'dashboards');
-  const semDashboards = { trilhas: catalogo.trilhas.filter((t) => t.slug !== 'dashboards') };
-  assert.equal(trilhaParaDoc(semDashboards, 'index'), 'analise');
+  assert.equal(trilhaParaDoc(catalogo, 'index', 'nao-existe'), 'onboarding');
+  const semOnboarding = { trilhas: catalogo.trilhas.filter((t) => t.slug !== 'onboarding') };
+  assert.equal(trilhaParaDoc(semOnboarding, 'index'), 'analise');
 });
 
 test('trilhaParaDoc: catálogo nulo dá null; trilha sem lista de aulas não quebra', () => {
