@@ -5,6 +5,7 @@
   "descricao": "Do \"por que um dashboard\" à escolha do gráfico certo, com Apache Superset e Power BI.",
   "categoria": "negocial",
   "chamada": "Um dashboard ruim some na rotina de quem devia usá-lo. Um dashboard bom muda decisão. Aprenda a construir o seu: dos fundamentos e do design à escolha do gráfico certo, com Apache Superset e Power BI.",
+  "status": "oculta",
   "etapas": [
     {
       "rotulo": "Por quê",

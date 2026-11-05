@@ -3,7 +3,7 @@ slug: adocao
 titulo: Implante o Gov Hub na sua infraestrutura
 descricao: Do que é a plataforma ao fork temático, para a equipe de TI que vai implantar o Gov Hub em outro órgão.
 categoria: tecnica
-status: em-breve
+status: oculta
 etapas: Entender=Entender a plataforma | Planejar=Planejar a adoção | Preparar=Preparar a infraestrutura | Implantar=Primeiro deploy | Conectar=Conectar a primeira fonte | Governar=Governança e acesso | Expandir=Fork temático
 etapas_subtitulo: Sete etapas em sequência: do que é a plataforma ao fork temático
 ---

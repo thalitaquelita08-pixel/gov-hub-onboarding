@@ -1,0 +1,377 @@
+{
+  "_aviso": "Gerado por tools/gen_roadmap.py a partir de trilhas/ - nao edite a mao.",
+  "slug": "onboarding",
+  "titulo": "Onboarding Gov Hub",
+  "descricao": "Para quem acabou de chegar na equipe: o Lab Livre, quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas que você vai usar.",
+  "categoria": "negocial",
+  "chamada": "Seja bem-vindo(a) ao Gov Hub. Esta trilha te leva pelo essencial em oito etapas: o Lab Livre, quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas que você vai usar. Cada etapa tem tarefas curtas: conclua cada uma e acompanhe aqui o quanto falta.",
+  "etapas": [
+    {
+      "rotulo": "Boas-vindas",
+      "caixa": "Boas-vindas"
+    },
+    {
+      "rotulo": "Laboratório",
+      "caixa": "Laboratório"
+    },
+    {
+      "rotulo": "Quem somos",
+      "caixa": "Quem somos"
+    },
+    {
+      "rotulo": "Parcerias",
+      "caixa": "Parcerias e projetos"
+    },
+    {
+      "rotulo": "Equipe",
+      "caixa": "Times e equipe"
+    },
+    {
+      "rotulo": "Ritmo",
+      "caixa": "Como a gente trabalha"
+    },
+    {
+      "rotulo": "Ferramentas",
+      "caixa": "Ferramentas e acessos"
+    },
+    {
+      "rotulo": "Links",
+      "caixa": "Marca e links úteis"
+    }
+  ],
+  "etapas_subtitulo": "Oito etapas, no seu ritmo: da chegada às ferramentas do dia a dia",
+  "niveis": [
+    {
+      "numero": 1,
+      "titulo": "Boas-vindas",
+      "descricao": "O que é esta trilha, para que ela serve e como funciona.",
+      "etapa": "Boas-vindas",
+      "icone": "assets/icones/play-circle-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/video-de-onboarding",
+          "titulo": "Assistir ao vídeo de onboarding",
+          "doc": "docs/onboarding/video-de-onboarding.md",
+          "tipo": "tutorial",
+          "tipo_nome": "Tutorial",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/book-open-sober.svg"
+        },
+        {
+          "id": "onboarding/salvar-a-trilha",
+          "titulo": "Salvar o link desta trilha nos favoritos",
+          "doc": "docs/onboarding/salvar-a-trilha.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Laboratório",
+      "descricao": "O que é o Lab Livre, como funciona, como se organiza e como o Gov Hub faz parte dele.",
+      "etapa": "Laboratório",
+      "icone": "assets/icones/beaker-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/conhecer-o-lab-livre",
+          "titulo": "Conhecer o Lab Livre",
+          "doc": "docs/onboarding/conhecer-o-lab-livre.md",
+          "tipo": "explicacao",
+          "tipo_nome": "Explicação",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/light-bulb-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Quem somos",
+      "descricao": "O Gov Hub: origem, o problema que a gente resolve, missão, metodologia e atuação.",
+      "etapa": "Quem somos",
+      "icone": "assets/icones/heart-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/de-onde-a-gente-vem",
+          "titulo": "De onde a gente vem e que problema resolve",
+          "doc": "docs/onboarding/de-onde-a-gente-vem.md",
+          "tipo": "explicacao",
+          "tipo_nome": "Explicação",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/light-bulb-sober.svg"
+        },
+        {
+          "id": "onboarding/missao-visao-e-valores",
+          "titulo": "Missão, visão e valores",
+          "doc": "docs/onboarding/missao-visao-e-valores.md",
+          "tipo": "explicacao",
+          "tipo_nome": "Explicação",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/light-bulb-sober.svg"
+        },
+        {
+          "id": "onboarding/metodologia-e-atuacao",
+          "titulo": "Metodologia e atuação do Gov Hub",
+          "doc": "docs/onboarding/metodologia-e-atuacao.md",
+          "tipo": "explicacao",
+          "tipo_nome": "Explicação",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/light-bulb-sober.svg"
+        },
+        {
+          "id": "onboarding/documento-base-dos-projetos",
+          "titulo": "Documento base dos projetos",
+          "doc": "docs/onboarding/documento-base-dos-projetos.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/document-text-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Parcerias e projetos",
+      "descricao": "Os órgãos parceiros, o que cada projeto faz e em qual deles você vai trabalhar.",
+      "etapa": "Parcerias",
+      "icone": "assets/icones/rectangle-group-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/projetos-com-parceiros",
+          "titulo": "Os cinco projetos com parceiros",
+          "doc": "docs/onboarding/projetos-com-parceiros.md",
+          "tipo": "explicacao",
+          "tipo_nome": "Explicação",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/light-bulb-sober.svg"
+        },
+        {
+          "id": "onboarding/seu-projeto",
+          "titulo": "Saber em qual projeto você vai atuar",
+          "doc": "docs/onboarding/seu-projeto.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Times e equipe",
+      "descricao": "As frentes de trabalho, as pessoas e as responsabilidades de cada time.",
+      "etapa": "Equipe",
+      "icone": "assets/icones/square-2-stack-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/organograma",
+          "titulo": "Encontrar o seu time no organograma",
+          "doc": "docs/onboarding/organograma.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/document-text-sober.svg"
+        },
+        {
+          "id": "onboarding/responsabilidades-do-time",
+          "titulo": "Entender as responsabilidades do seu time",
+          "doc": "docs/onboarding/responsabilidades-do-time.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/combinar-com-a-referencia",
+          "titulo": "Combinar com a liderança do seu time",
+          "doc": "docs/onboarding/combinar-com-a-referencia.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/perfil-na-pagina-de-equipe",
+          "titulo": "Preencher o seu perfil na página de equipe",
+          "doc": "docs/onboarding/perfil-na-pagina-de-equipe.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "titulo": "Como a gente trabalha",
+      "descricao": "Reuniões, relatórios e o Telegram do dia a dia.",
+      "etapa": "Ritmo",
+      "icone": "assets/icones/clipboard-document-list-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/entrar-no-telegram",
+          "titulo": "Entrar no grupo do Telegram",
+          "doc": "docs/onboarding/entrar-no-telegram.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/topicos-do-telegram",
+          "titulo": "Seguir o Geral e os tópicos do seu time e do seu projeto",
+          "doc": "docs/onboarding/topicos-do-telegram.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/document-text-sober.svg"
+        },
+        {
+          "id": "onboarding/se-apresentar",
+          "titulo": "Se apresentar no tópico Geral",
+          "doc": "docs/onboarding/se-apresentar.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/grade-horaria",
+          "titulo": "Preencher a planilha de grade horária",
+          "doc": "docs/onboarding/grade-horaria.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/agenda-coletiva",
+          "titulo": "Entrar na agenda coletiva do Google",
+          "doc": "docs/onboarding/agenda-coletiva.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/ritmo-e-alinhamento-semanal",
+          "titulo": "Participar do seu primeiro alinhamento semanal",
+          "doc": "docs/onboarding/ritmo-e-alinhamento-semanal.md",
+          "tipo": "explicacao",
+          "tipo_nome": "Explicação",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/light-bulb-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "titulo": "Ferramentas e acessos",
+      "descricao": "Notion, Drive, GitHub, Figma e o ambiente de desenvolvimento.",
+      "etapa": "Ferramentas",
+      "icone": "assets/icones/wrench-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/acesso-ao-notion",
+          "titulo": "Ter acesso ao Notion",
+          "doc": "docs/onboarding/acesso-ao-notion.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/acesso-ao-drive",
+          "titulo": "Ter acesso ao Drive",
+          "doc": "docs/onboarding/acesso-ao-drive.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/acesso-ao-github",
+          "titulo": "Ter acesso ao GitHub",
+          "doc": "docs/onboarding/acesso-ao-github.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/acesso-ao-figma",
+          "titulo": "Ter acesso ao Figma",
+          "doc": "docs/onboarding/acesso-ao-figma.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "support",
+          "papel_nome": "Apoio",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/ambiente-de-desenvolvimento",
+          "titulo": "Configurar o ambiente de desenvolvimento",
+          "doc": "docs/onboarding/ambiente-de-desenvolvimento.md",
+          "tipo": "tutorial",
+          "tipo_nome": "Tutorial",
+          "papel": "support",
+          "papel_nome": "Apoio",
+          "icone": "assets/icones/book-open-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "titulo": "Marca e links úteis",
+      "descricao": "Identidade visual, materiais e os links que você vai usar sempre.",
+      "etapa": "Links",
+      "icone": "assets/icones/swatch-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/identidade-visual",
+          "titulo": "Conhecer a marca e os materiais",
+          "doc": "docs/onboarding/identidade-visual.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/document-text-sober.svg"
+        },
+        {
+          "id": "onboarding/links-uteis",
+          "titulo": "Conhecer os links úteis",
+          "doc": "docs/onboarding/links-uteis.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "capstone",
+          "papel_nome": "Capstone",
+          "icone": "assets/icones/document-text-sober.svg"
+        }
+      ]
+    }
+  ]
+}

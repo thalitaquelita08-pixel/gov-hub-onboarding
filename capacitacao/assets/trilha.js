@@ -38,5 +38,5 @@ export function trilhaParaDoc(catalogo, id, preferida) {
   const primeira = trilhas.find((t) => (t.aulas || []).includes(id));
   if (primeira) return primeira.slug;
   if (escolherTrilha(catalogo, preferida) === preferida) return preferida;
-  return escolherTrilha(catalogo, 'dashboards');
+  return escolherTrilha(catalogo, 'onboarding');
 }

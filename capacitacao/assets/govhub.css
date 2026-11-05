@@ -63,27 +63,14 @@ button{font-family:inherit}
 h1,h2,h3{font-weight:var(--heading-weight);letter-spacing:var(--heading-tracking);line-height:var(--heading-leading);margin:0}
 
 /* ---------- Topo ---------- */
-/* Menu do site do Gov Hub (igual ao de gov-hub.io) + sub-barra da capacitação, os dois fixos no topo */
+/* Barra do Gov Hub + sub-barra do onboarding, as duas fixas no topo */
 header.site{position:sticky;top:0;z-index:50}
 .gh-nav{background:var(--primary-purple);color:#fff}
 .gh-nav-in{max-width:var(--largura);margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
 .gh-logo img{height:30px;width:auto;display:block}
-.gh-links{flex:1;display:flex;justify-content:center;align-items:center;gap:4px}
-.gh-links a{color:#fff;font-size:12px;font-weight:700;letter-spacing:.5px;padding:8px 14px;border-radius:8px;white-space:nowrap}
-.gh-links a:hover{background:rgba(255,255,255,.14)}
-.gh-links a.ativo{background:#fff;color:var(--dark-navy)}
 .gh-social{display:flex;align-items:center;gap:16px}
 .gh-social img{width:32px;height:32px;display:block}
-.gh-menu-btn{display:none;margin-left:auto;background:none;border:none;padding:8px;cursor:pointer;flex-direction:column;gap:5px}
-.gh-menu-btn span{display:block;width:24px;height:2.5px;background:#fff;border-radius:2px}
-@media(max-width:1199.98px){
-  .gh-menu-btn{display:flex}
-  .gh-nav .gh-social{display:none}
-  .gh-links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
-      background:var(--primary-purple);padding:8px 16px 16px;box-shadow:var(--shadow-xl)}
-  .gh-links.aberto{display:flex}
-  .gh-links a{padding:12px 14px;font-size:14px}
-}
+.gh-nav .gh-social{margin-left:auto}
 
 /* sub-barra da capacitação: clara, com a borda da marca */
 .site-nav{background:#fff;color:var(--dark-navy);border-bottom:2px solid var(--border-soft)}
@@ -225,7 +212,7 @@ header.site{position:sticky;top:0;z-index:50}
 .gh-rodape-logo img{height:90px;max-width:220px;width:auto;object-fit:contain}
 .gh-rodape-logo img[src$=".png"]:not([src*="ipea"]){filter:brightness(0) invert(1)}
 .gh-rodape-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:48px}
-.gh-rodape-contato{grid-column:4}
+
 .gh-rodape h4{font-size:15px;font-weight:700;margin:0 0 12px}
 .gh-rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .gh-rodape a{color:#fff;font-size:15px}

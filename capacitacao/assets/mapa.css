@@ -60,6 +60,13 @@ main:focus{outline:none}
 .bloco-titulo em{font-style:normal;font-weight:400}
 .bloco-intro{margin:16px 0 0;max-width:46em;font-size:16px}
 
+/* ---------- Fotos: galeria da equipe ---------- */
+.galeria-bloco{padding-top:0}
+.galeria{columns:2;column-gap:24px;margin-top:28px}
+.galeria figure{break-inside:avoid;margin:0 0 24px}
+.galeria img{display:block;width:100%;height:auto;border-radius:var(--radius-md)}
+@media(max-width:560px){.galeria{columns:1}}
+
 /* Trilha vertical: um nó por nível, ligado ao próximo; o fio fica roxo quando o nível está concluído */
 .trail{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-direction:column}
 .trail li{position:relative}
@@ -157,6 +164,22 @@ main:focus{outline:none}
 #nivel-titulo{font-size:clamp(30px,5vw,52px);color:var(--dark-navy);max-width:18ch}
 #nivel-titulo:focus{outline:none}
 .nivel-desc{margin:18px 0 0;font-size:17px;max-width:42em;line-height:1.6}
+.apresentacao{margin-top:36px;background:#fff;border-radius:24px;padding:30px;box-shadow:var(--shadow-md)}
+.apresentacao h2{color:var(--dark-navy);font-size:clamp(22px,3vw,30px)}
+.sobre-trilha p,.sobre-trilha li{font-size:16px;line-height:1.6}
+.sobre-trilha p{margin:12px 0 0}
+.sobre-trilha h3{margin:22px 0 0;color:var(--dark-navy);font-size:18px}
+.sobre-trilha ul{margin:10px 0 0;padding-left:22px;list-style:disc}
+.sobre-trilha li+li{margin-top:8px}
+.apresentacao-nota{margin:8px 0 0;font-size:14px;color:var(--text-muted)}
+.apresentacao-campos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
+.apresentacao-campos input{width:100%;box-sizing:border-box}
+.apresentacao-acoes{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:22px}
+.apresentacao-aviso{margin:0;font-size:14px;font-weight:700;color:var(--dark-navy)}
+@media(max-width:560px){
+  .apresentacao{padding:22px}
+  .apresentacao-campos{grid-template-columns:minmax(0,1fr)}
+}
 .taskbox{margin-top:36px;background:var(--dark-navy);color:#fff;border-radius:24px;padding:30px 30px 26px}
 .taskbox h2{color:#fff;font-size:clamp(22px,3vw,30px)}
 .tbsub{margin:8px 0 20px;color:var(--text-on-navy);font-variant-numeric:tabular-nums}

@@ -1,23 +1,20 @@
-// Página da aula (doc.html): aulas do nível à esquerda, aula em Markdown, avaliação e a sequência
+// Página da tarefa (doc.html): tarefas da etapa à esquerda, a tarefa em Markdown e a sequência
 // anterior/próxima, sem recarregar a página. Links antigos doc.html?path=... continuam valendo.
 import { progresso } from './progresso.js';
 import { carregarCatalogo, carregarTrilha, escolherTrilha, trilhaParaDoc } from './trilha.js';
 import { montarTopo } from './topo.js';
 import { el, svg, ICONES } from './dom.js';
-import { montarFeedback } from './feedback.js';
 import { montarCelebracao } from './celebracao.js';
 import { caminhoSeguro } from './caminho.js';
 import { hrefDoItem, idDoDoc, localizar, todosFeitos, vizinhos } from './progresso-nucleo.js';
-import { nivelPadrao, papelVisual, pdfDaAula } from './hub-nucleo.js';
+import { nivelPadrao } from './hub-nucleo.js';
 
 const $ = (id) => document.getElementById(id);
-const feedback = montarFeedback($('feedback'), progresso);
 let niveis = [];
 let trilha = null;   // objeto da trilha aberta
 let slug = null;     // slug da trilha aberta
 let atual = { path: null, item: null };   // item: nó da trilha, ou null para página fora dela
 let celebracao = null;
-const ROTULO_PAPEL = { essencial: 'Essencial', apoio: 'Apoio', marco: 'Marco' };
 
 // ---- URL e Markdown -----------------------------------------------------------
 function lerUrl() {
@@ -119,7 +116,7 @@ function desenharDiagramas(raiz) {
   }).catch(() => {});
 }
 
-// ---- Aulas do nível (à esquerda) ------------------------------------------------------
+// ---- Tarefas da etapa (à esquerda) ------------------------------------------------------
 let nivelMontado = null;
 function montarNivel() {
   const item = atual.item;
@@ -128,7 +125,7 @@ function montarNivel() {
   if (!item || item.nivel === nivelMontado) return;
   nivelMontado = item.nivel;
   const nivel = niveis.find((n) => n.numero === item.nivel);
-  $('nivel-card-titulo').textContent = `Nível ${nivel.numero} · ${nivel.titulo}`;
+  $('nivel-card-titulo').textContent = `Etapa ${nivel.numero} · ${nivel.titulo}`;
   $('nivel-lista').replaceChildren(...nivel.itens.map((it) => el('li', {},
     el('a', { class: 'content-nav-item', href: hrefDoItem(slug, it), 'data-id': it.id },
       el('span', { class: 'content-nav-dot', 'aria-hidden': 'true' }),
@@ -148,18 +145,10 @@ function pintarProgresso() {
   if (celebracao) celebracao.verificar();
 }
 
-// ---- Contexto e sequência da aula -------------------------------------------------
+// ---- Contexto e sequência da tarefa -----------------------------------------------
 function pintarContexto() {
-  const meta = $('aula-meta');
   const item = atual.item;
-  meta.hidden = !item;
-  if (!item) { meta.replaceChildren(); return; }
-  const papel = papelVisual(item.papel);
-  meta.replaceChildren(
-    el('span', { class: 'tipo-aula' }, el('img', { src: item.icone, alt: '' }), el('span', {}, item.tipo_nome)),
-    el('span', { class: 'tag ' + papel }, ROTULO_PAPEL[papel]),
-    el('a', { class: 'btn-pdf', href: pdfDaAula(item.id), download: '', 'aria-label': 'Baixar esta aula em PDF' },
-      svg(ICONES.baixar), 'Baixar PDF'));
+  if (!item) return;
   const mapa = 'mapa.html?trilha=' + encodeURIComponent(slug) + '#nivel-' + item.nivel;
   $('voltar-trilha').href = mapa;
 }
@@ -176,7 +165,7 @@ function pintarRodape() {
     link.querySelector('.nav-btn-label').textContent = anterior.titulo;
   }
   const feita = todosFeitos(progresso.feitos(), [atual.item.id]);
-  let rotulo = feita ? 'Avançar' : 'Concluir e avançar';
+  let rotulo = 'Concluir e avançar';
   if (!proxima) rotulo = feita ? 'Voltar para a trilha' : 'Concluir a trilha';
   $('aula-cta').querySelector('.nav-btn-label').textContent = rotulo;
 }
@@ -204,7 +193,6 @@ async function abrir({ path }, { foco = false } = {}) {
   pintarContexto();
   montarNivel();
   pintarProgresso();
-  feedback.mostrar(null, slug);   // some enquanto a aula carrega
   const conteudo = $('conteudo');
   conteudo.setAttribute('aria-busy', 'true');
   try {
@@ -227,7 +215,6 @@ async function abrir({ path }, { foco = false } = {}) {
     const h1 = conteudo.querySelector('h1');
     document.title = (h1 ? h1.textContent : path) + ' · ' + (trilha ? trilha.titulo : 'Trilhas') + ' · Gov Hub';
     if (atual.item) progresso.registrarUltimaAula(slug, path);
-    feedback.mostrar(atual.item ? atual.item.id : null, slug);
     const alvo = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
     if (alvo) alvo.scrollIntoView();
     else window.scrollTo(0, 0);
@@ -285,7 +272,7 @@ $('nivel-card-botao').replaceChildren(svg(ICONES.seta));
 $('nivel-card-botao').addEventListener('click', () => {
   const recolhida = $('nivel-card').classList.toggle('collapsed');
   $('nivel-card-botao').setAttribute('aria-expanded', String(!recolhida));
-  $('nivel-card-botao').setAttribute('aria-label', (recolhida ? 'Mostrar' : 'Recolher') + ' a lista de aulas do nível');
+  $('nivel-card-botao').setAttribute('aria-label', (recolhida ? 'Mostrar' : 'Recolher') + ' a lista de tarefas da etapa');
 });
 let catalogo = null;
 try { catalogo = await carregarCatalogo(); } catch { catalogo = null; }
@@ -295,7 +282,7 @@ try { catalogo = await carregarCatalogo(); } catch { catalogo = null; }
   const pedido = lerUrl();
   const valida = escolherTrilha(catalogo, pedido.trilha) === pedido.trilha ? pedido.trilha : null;
   const ultima = progresso.ultimaAula();
-  slug = valida || trilhaParaDoc(catalogo, idDoDoc(pedido.path), ultima && ultima.trilha) || 'dashboards';
+  slug = valida || trilhaParaDoc(catalogo, idDoDoc(pedido.path), ultima && ultima.trilha) || 'onboarding';
 }
 try { trilha = await carregarTrilha(slug); niveis = trilha.niveis || []; } catch { trilha = null; niveis = []; }   // sem a trilha o leitor ainda abre o Markdown, só sem a lista do nível
 if (lerUrl().trilha !== slug) {

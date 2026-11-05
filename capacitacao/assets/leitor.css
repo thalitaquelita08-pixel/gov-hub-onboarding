@@ -53,6 +53,7 @@ body.sem-nivel .layout{grid-template-columns:minmax(0,1fr);max-width:920px}   /*
 .conteudo img{max-width:100%;height:auto}
 .conteudo ul,.conteudo ol{padding-left:1.5em}
 .conteudo figure{margin:1.4em 0;text-align:center}
+.conteudo figure img{display:block;margin:0 auto;max-height:560px;width:auto;border-radius:var(--radius-md)}
 .conteudo figcaption{font-size:.85rem;color:var(--text-muted);margin-top:.5em}
 .conteudo p > img:only-child{display:block;width:100%;height:auto;margin:1.2em auto}
 .conteudo .mermaid{margin:1.6em 0;text-align:center;overflow-x:auto}

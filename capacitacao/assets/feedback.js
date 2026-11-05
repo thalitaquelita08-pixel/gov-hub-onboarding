@@ -60,7 +60,7 @@ export function montarFeedback(secao, progresso) {
     if (!aula) { secao.hidden = true; secao.replaceChildren(); return; }
     secao.hidden = false;
     if ((enviada || progresso.foiAvaliada(aula)) && !refazer && progresso.usuario()) {
-      const t = titulo('Obrigado por avaliar esta aula.');
+      const t = titulo('Obrigado por avaliar esta tarefa.');
       t.setAttribute('tabindex', '-1');
       secao.replaceChildren(el('div', { class: 'fb-obrigado' },
         el('img', { src: 'assets/icones/heart-sober.svg', alt: '', width: '48', height: '48' }),
@@ -70,13 +70,13 @@ export function montarFeedback(secao, progresso) {
       return;
     }
     if (!progresso.usuario()) {
-      secao.replaceChildren(titulo('Conte como foi esta aula'),
+      secao.replaceChildren(titulo('Conte como foi esta tarefa'),
         ...(progresso.nuvemDisponivel()
           ? [el('p', { class: 'fb-texto' }, 'Entre na sua conta para avaliar este conteúdo.'), botaoEntrar(progresso, { contornado: true })]
           : [el('p', { class: 'fb-texto' }, 'A avaliação fica disponível quando o login estiver funcionando.')]));
       return;
     }
-    if (!secao.querySelector('form')) secao.replaceChildren(titulo('Conte como foi esta aula'), formulario());
+    if (!secao.querySelector('form')) secao.replaceChildren(titulo('Conte como foi esta tarefa'), formulario());
   }
 
   // Redesenha só quando muda o que importa (login, avaliada) — marcar aulas não apaga o que a pessoa digitou.

@@ -9,87 +9,122 @@
 <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/govhub.css">
 <link rel="stylesheet" href="assets/mapa.css">
-<title>Mapa da trilha · Gov Hub</title>
+<title>Onboarding · Gov Hub</title>
 </head>
 <body>
 <a class="pular" href="#principal">Pular para a trilha</a>
 <header class="site" id="topo"></header>
 
 <main id="principal" tabindex="-1">
-<!-- ============ Visão geral: progresso, trilha vertical e todas as aulas ============ -->
+<!-- ============ Visão geral: progresso, trilha vertical e todas as tarefas ============ -->
 <div class="view" id="visao-geral">
   <section class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">Trilha</div>
+      <div class="eyebrow">Trilha de onboarding</div>
       <h1 id="trilha-titulo">Carregando…</h1>
       <p id="trilha-chamada"></p>
       <div class="hero-acoes">
         <a class="btn-primario btn-grande" id="cta" href="#" hidden><span id="cta-texto"></span></a>
-        <a class="btn-pdf btn-pdf--hero" id="trilha-pdf" href="#" download hidden></a>
       </div>
       <div class="ringcard" id="anel" aria-live="polite" hidden>
         <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="52" fill="none" stroke-width="12"/><circle class="arc" id="anel-arco" cx="60" cy="60" r="52" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="326.73"/></svg><span class="v" id="anel-pct">0%</span></div>
-        <div class="ringtxt"><b>da trilha feita</b><span id="anel-aulas"></span><span id="anel-niveis"></span></div>
+        <div class="ringtxt"><b>do onboarding feito</b><span id="anel-aulas"></span><span id="anel-niveis"></span></div>
       </div>
     </div>
   </section>
 
-  <section class="logic-card" id="logica" aria-labelledby="logica-titulo" hidden>
-    <div class="logic-head">
-      <h2 id="logica-titulo">A lógica da trilha</h2>
-      <button class="logic-toggle" id="logica-botao" type="button" aria-expanded="true" aria-controls="logica-corpo">
-        <span id="logica-rotulo">Ocultar</span>
-        <span class="seta" id="logica-seta"></span>
-      </button>
-    </div>
-    <div class="logic-body" id="logica-corpo">
-      <p class="logic-sub" id="logica-sub"></p>
-      <ol class="stage-row" id="etapas"></ol>
-      <p class="logic-foot" id="logica-nota" hidden></p>
-    </div>
-  </section>
-
-  <a href="#" class="trail-quiz-banner" id="banner-quiz" hidden>
-    <span class="trail-quiz-banner-text"><strong>Você concluiu toda a trilha.</strong> Revise o que aprendeu no quiz final.</span>
-    <span class="trail-quiz-banner-cta">Fazer o quiz de revisão →</span>
-  </a>
-
   <section class="bloco" aria-labelledby="trilha-sec-titulo">
     <p class="kicker">Sua trilha</p>
-    <h2 class="bloco-titulo" id="trilha-sec-titulo">Os níveis, <em>no seu ritmo</em></h2>
-    <p class="bloco-intro">A ordem sugerida vai dos fundamentos à prática. Você pode abrir qualquer nível a qualquer momento e voltar quando precisar.</p>
+    <h2 class="bloco-titulo" id="trilha-sec-titulo">Oito etapas, <em>no seu ritmo</em></h2>
+    <p class="bloco-intro">A ordem sugerida vai do contexto às ferramentas. Você pode abrir qualquer etapa a qualquer momento e voltar quando precisar.</p>
     <ol class="trail" id="trilha-niveis"></ol>
+  </section>
+
+  <section class="bloco galeria-bloco" aria-labelledby="galeria-titulo">
+    <p class="kicker">Quem faz o Gov Hub</p>
+    <h2 class="bloco-titulo" id="galeria-titulo">A gente, <em>em ação</em></h2>
+    <div class="galeria">
+      <figure><img src="assets/fotos/equipe-planejamento.jpg" width="1600" height="1200" loading="lazy" alt="Grupo posando diante de uma parede coberta de cartazes e notas adesivas coloridas."></figure>
+      <figure><img src="assets/fotos/equipe-lablivre.jpg" width="1200" height="1600" loading="lazy" alt="Grupo reunido em uma sala decorada com bandeirinhas, em volta da placa do Lab Livre."></figure>
+      <figure><img src="assets/fotos/equipe-bandeira.jpg" width="1280" height="960" loading="lazy" alt="Grupo posando em frente a um contêiner branco com a bandeira do Brasil."></figure>
+      <figure><img src="assets/fotos/campus-party.jpg" width="1600" height="738" loading="lazy" alt="Cinco pessoas abraçadas, com crachás, em um pavilhão de evento."></figure>
+    </div>
   </section>
 
   <section class="bloco bloco-alt" aria-labelledby="aulas-sec-titulo">
     <div class="bloco-in">
-      <p class="kicker">Todas as aulas</p>
+      <p class="kicker">Checklist completo</p>
       <h2 class="bloco-titulo" id="aulas-sec-titulo">Tudo o que falta, <em>num lugar só</em></h2>
-      <p class="bloco-intro">As mesmas aulas dos níveis, reunidas para você marcar daqui mesmo.</p>
-      <div class="legend">
-        <span class="legend-item"><span class="legend-dot"></span> Essencial</span>
-        <span class="legend-item"><span class="legend-dot outline"></span> Apoio / opcional</span>
-        <span class="legend-item"><span class="legend-dot rose"></span> Marco</span>
-      </div>
+      <p class="bloco-intro">As mesmas tarefas das etapas, reunidas para você marcar daqui mesmo.</p>
       <div class="checklist" id="checklist"></div>
-      <p class="done-msg" id="concluida-msg" hidden>Trilha concluída. Você pode voltar aqui como referência sempre que precisar.</p>
+      <p class="done-msg" id="concluida-msg" hidden>Onboarding concluído. Seja muito bem-vinda, seja muito bem-vindo: a gente está junto.</p>
       <div class="limpar-linha"><button class="btn-reset" id="limpar" type="button">limpar progresso</button></div>
     </div>
   </section>
 </div>
 
-<!-- ============ Um nível: aulas como tarefas e navegação anterior/próximo ============ -->
+<!-- ============ Uma etapa: as tarefas e a navegação anterior/próxima ============ -->
 <div class="view" id="tela-nivel" hidden>
   <section class="stephead">
     <div class="bloco-in">
       <a class="btn-link voltar" href="#" id="voltar-geral"></a>
-      <nav class="crumbs" id="migalhas" aria-label="Níveis da trilha"></nav>
+      <nav class="crumbs" id="migalhas" aria-label="Etapas da trilha"></nav>
       <p class="kicker" id="nivel-kicker"></p>
       <div class="nivel-topo">
         <span class="panel-icon" id="nivel-icone" hidden></span>
         <h1 id="nivel-titulo" tabindex="-1"></h1>
       </div>
       <p class="nivel-desc" id="nivel-desc"></p>
+      <section class="apresentacao sobre-trilha" id="sobre-trilha" aria-labelledby="sobre-trilha-titulo" hidden>
+        <h2 id="sobre-trilha-titulo">Sobre esta trilha</h2>
+        <p>Esta trilha é o seu ponto de partida no Gov Hub. O objetivo é que você entenda o que é o Lab Livre e o Gov Hub, conheça os projetos e as pessoas, saiba como a gente trabalha e chegue ao fim com as ferramentas do dia a dia em mãos.</p>
+        <h3>Como funciona</h3>
+        <ul>
+          <li>São oito etapas, com tarefas curtas. A ordem sugerida vai do contexto às ferramentas, mas você pode abrir qualquer etapa quando quiser.</li>
+          <li>Ao terminar uma tarefa, clique em <strong>Concluir e avançar</strong>. A página inicial da trilha mostra o quanto você já fez e o que falta.</li>
+          <li>O seu progresso fica salvo neste navegador. Se fechar a página ou desligar o computador, é só voltar pelo mesmo computador e navegador para continuar de onde parou.</li>
+        </ul>
+      </section>
+      <section class="apresentacao" id="apresentacao" aria-labelledby="apresentacao-titulo" hidden>
+        <h2 id="apresentacao-titulo">Seus dados</h2>
+        <p class="apresentacao-nota">Estas respostas são enviadas para a equipe do Gov Hub, junto com a data e a hora do envio.</p>
+        <form id="apresentacao-form">
+          <div class="apresentacao-campos">
+            <div class="login-campo">
+              <label for="apresentacao-nome">Nome completo</label>
+              <input id="apresentacao-nome" name="nome" type="text" autocomplete="name" required>
+            </div>
+            <div class="login-campo">
+              <label for="apresentacao-time">Time que você vai integrar</label>
+              <input id="apresentacao-time" name="time" type="text" list="apresentacao-times" autocomplete="off" required>
+              <datalist id="apresentacao-times">
+                <option value="Arquitetura e Infraestrutura"></option>
+                <option value="Capacitação"></option>
+                <option value="Ciência de Dados"></option>
+                <option value="Cibersegurança"></option>
+                <option value="Comunicação"></option>
+                <option value="Comunidade"></option>
+                <option value="Engenharia de Dados"></option>
+                <option value="Gestão"></option>
+                <option value="Gestão Administrativa e Financeira"></option>
+                <option value="Gestão do Conhecimento"></option>
+                <option value="Governança de Dados"></option>
+                <option value="Pesquisa"></option>
+                <option value="Políticas Públicas"></option>
+                <option value="Produto"></option>
+              </datalist>
+            </div>
+            <div class="login-campo">
+              <label for="apresentacao-papel">Papel que você vai executar</label>
+              <input id="apresentacao-papel" name="papel" type="text" autocomplete="off" required>
+            </div>
+          </div>
+          <div class="apresentacao-acoes">
+            <button class="btn-primario" type="submit">Enviar</button>
+            <p class="apresentacao-aviso" id="apresentacao-aviso" role="status" hidden></p>
+          </div>
+        </form>
+      </section>
       <div class="taskbox" id="tarefas"></div>
       <nav class="pager" id="paginador" aria-label="Outros níveis"></nav>
     </div>

@@ -1,96 +1,62 @@
-// Topo comum a todas as páginas: o menu do site do Gov Hub e, abaixo, a sub-barra da capacitação
-// (busca, Dúvidas, conta Google); o rodapé do site e o aviso de sincronização.
+// Topo comum a todas as páginas: a barra do Gov Hub e, abaixo, a sub-barra do onboarding
+// (busca); o rodapé e o aviso de sincronização.
 // Cada página tem só <header class="site" id="topo"></header>.
 import { el, svg, ICONES } from './dom.js';
-import { botaoEntrar } from './login.js';
 import { carregarCatalogo, carregarTrilha } from './trilha.js';
 import { buscarAulas } from './hub-nucleo.js';
 import { hrefDoItem } from './progresso-nucleo.js';
 
 export const EMAIL_CONTATO = 'govhub@unb.br';
 
-// O site do Gov Hub fica um nível acima (as trilhas moram em /capacitacao/). Caminhos relativos,
-// para funcionar tanto no domínio próprio quanto no preview do GitHub Pages.
-const SITE = '../';
-const MENU_SITE = [
-  ['HOME', SITE + 'home/'], ['SOBRE', SITE + 'sobre/'], ['QUEM SOMOS', SITE + 'quem-somos/'],
-  ['PROJETOS', SITE + 'projetos/'], ['PUBLICAÇÕES', SITE + 'publicacoes/'],
-  ['CAPACITAÇÃO', 'index.html', true], ['DOCUMENTAÇÃO', SITE + 'documentacao/'],
-];
+const INICIO = 'mapa.html?trilha=onboarding';
 const REDES = [
   ['https://www.instagram.com/govhub.br', 'instagram', 'Instagram'],
   ['https://github.com/GovHub-br/gov-hub', 'github', 'GitHub'],
 ];
 
-// Menu principal: o mesmo do site do Gov Hub, com CAPACITAÇÃO ativo.
-function montarMenuSite() {
-  const links = MENU_SITE.map(([texto, href, ativo]) =>
-    el('a', { href, class: ativo ? 'ativo' : null, 'aria-current': ativo ? 'page' : null }, texto));
-  const menu = el('nav', { class: 'gh-links', id: 'gh-links', 'aria-label': 'Site do Gov Hub' }, ...links);
-  const botao = el('button', {
-    class: 'gh-menu-btn', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'gh-links', 'aria-label': 'Abrir o menu',
-    onclick: () => {
-      const aberto = menu.classList.toggle('aberto');
-      botao.setAttribute('aria-expanded', String(aberto));
-    },
-  }, el('span'), el('span'), el('span'));
+// Barra do Gov Hub: só a marca e as redes. O site é uma página só, a trilha de onboarding.
+function montarBarraSite() {
   return el('div', { class: 'gh-nav' }, el('div', { class: 'gh-nav-in' },
-    el('a', { class: 'gh-logo', href: SITE + 'home/' },
+    el('a', { class: 'gh-logo', href: INICIO },
       el('img', { src: 'assets/logo/logomarca-horizontal-white.svg', alt: 'Gov Hub', width: 128, height: 30 })),
-    menu,
     el('div', { class: 'gh-social' }, ...REDES.map(([href, icone, nome]) =>
       el('a', { href, target: '_blank', rel: 'noopener', 'aria-label': nome },
-        el('img', { src: `assets/logo/redes/${icone}.svg`, alt: '' })))),
-    botao));
+        el('img', { src: `assets/logo/redes/${icone}.svg`, alt: '' }))))));
 }
 
 export function montarTopo(progresso) {
   const raiz = document.getElementById('topo');
-  const conta = el('div', { class: 'conta', id: 'conta' });
-  // Sub-barra da capacitação (busca, Dúvidas, conta), abaixo do menu do site.
-  raiz.replaceChildren(montarMenuSite(), el('div', { class: 'site-nav' }, el('div', { class: 'site-nav-in' },
-    el('a', { class: 'marca', href: 'index.html' }, el('span', {}, 'Trilhas de capacitação')),
-    montarBusca(),
-    el('div', { class: 'nav-actions' },
-      el('a', { class: 'btn-contact', href: 'mailto:' + EMAIL_CONTATO, title: 'Dúvidas ou contato: ' + EMAIL_CONTATO, 'aria-label': 'Dúvidas? Escreva para ' + EMAIL_CONTATO },
-        svg(ICONES.email), el('span', {}, 'Dúvidas?')),
-      conta))));
-  montarConta(conta, progresso);
+  // Sub-barra do onboarding (busca), abaixo da barra do Gov Hub.
+  raiz.replaceChildren(montarBarraSite(), el('div', { class: 'site-nav' }, el('div', { class: 'site-nav-in' },
+    el('a', { class: 'marca', href: INICIO }, el('span', {}, 'Onboarding Gov Hub')),
+    montarBusca())));
   montarAviso(progresso);
   document.body.append(montarRodape());
 }
 
-// ---- Rodapé: o mesmo do site do Gov Hub ---------------------------------------------------
+// ---- Rodapé: quem faz o Gov Hub e o contato ---------------------------------------------------
 const PARCEIROS = [
   ['lab-livre-white.svg', 'Lab Livre'], ['unb-light-outlined.svg', 'Universidade de Brasília'],
   ['capibaribe.png', 'Capibaribe'], ['Cidade_Democratica.png', 'Instituto Cidade Democrática'],
 ];
 const APOIO = [
-  ['ipea_footer.png', 'Ipea'], ['cidades_negativo.svg', 'Ministério das Cidades'],
-  ['mir_negativo.svg', 'Ministério da Igualdade Racial'], ['mgi_negativo.svg', 'Ministério da Gestão e da Inovação em Serviços Públicos'],
-  ['cultura_negativo.svg', 'Ministério da Cultura'],
+  ['ipea_footer.png', 'Ipea'], ['cidades.png', 'Ministério das Cidades'],
+  ['igualdaderacial.png', 'Ministério da Igualdade Racial'], ['MGI_logo.png', 'Ministério da Gestão e da Inovação em Serviços Públicos'],
+  ['MINC_logo.png', 'Ministério da Cultura'],
 ];
 
 function montarRodape() {
   const logos = (lista) => el('div', { class: 'gh-rodape-logos' },
     ...lista.map(([arq, nome]) => el('div', { class: 'gh-rodape-logo' }, el('img', { src: 'assets/logo/parceiros/' + arq, alt: nome }))));
-  const lista = (itens) => el('ul', {}, ...itens.map(([texto, href]) => el('li', {}, el('a', { href }, texto))));
   return el('footer', { class: 'site gh-rodape' }, el('div', { class: 'gh-rodape-in' },
     el('p', { class: 'gh-rodape-rotulo' }, 'Gov Hub é uma iniciativa'), logos(PARCEIROS),
     el('p', { class: 'gh-rodape-rotulo' }, 'Apoio'), logos(APOIO),
     el('div', { class: 'gh-rodape-links' },
-      el('div', { class: 'gh-rodape-nav' }, lista([
-        ['Home', SITE + 'home/'], ['Sobre', SITE + 'sobre/'], ['Projetos', SITE + 'projetos/'],
-        ['Publicações', SITE + 'publicacoes/'], ['Quem somos', SITE + 'quem-somos/'],
-        ['Documentação', SITE + 'documentacao/'], ['DEMO', SITE + 'dashboards/']])),
-      el('div', {}, el('h4', {}, 'Como usar'), lista([
-        ['Capacitação', 'index.html'], ['Documentação', SITE + 'documentacao/instalacao']])),
-      el('div', { class: 'gh-rodape-contato' }, el('h4', {}, 'Contato'), lista([[EMAIL_CONTATO, 'mailto:' + EMAIL_CONTATO]]),
+      el('div', { class: 'gh-rodape-contato' }, el('h4', {}, 'Contato'), el('ul', {}, el('li', {}, el('a', { href: 'mailto:' + EMAIL_CONTATO }, EMAIL_CONTATO))),
         el('div', { class: 'gh-social' }, ...REDES.map(([href, icone, nome]) =>
           el('a', { href, target: '_blank', rel: 'noopener', 'aria-label': nome },
             el('img', { src: `assets/logo/redes/${icone}.svg`, alt: '' })))))),
-    el('p', { class: 'gh-rodape-credito' }, 'Trilhas de capacitação · estrutura baseada em ',
-      el('a', { href: 'https://diataxis.fr/' }, 'Diátaxis'))));
+    el('p', { class: 'gh-rodape-credito' }, 'Onboarding Gov Hub')));
 }
 
 // ---- Busca: títulos das aulas das trilhas abertas --------------------------------------
@@ -98,8 +64,8 @@ function montarBusca() {
   const lista = el('ul', { class: 'search-results', id: 'busca-resultados', hidden: true });
   const status = el('span', { class: 'sr-only', role: 'status', 'aria-live': 'polite' });
   const campo = el('input', {
-    type: 'search', id: 'busca', placeholder: 'Buscar conteúdo das trilhas…', autocomplete: 'off',
-    'aria-label': 'Buscar conteúdo das trilhas', 'aria-controls': 'busca-resultados',
+    type: 'search', id: 'busca', placeholder: 'Buscar tarefas…', autocomplete: 'off',
+    'aria-label': 'Buscar tarefas', 'aria-controls': 'busca-resultados',
   });
   let trilhas = null;
   async function carregar() {
@@ -147,57 +113,6 @@ function montarBusca() {
     if (ev.key === 'Escape' && !lista.hidden) { fechar(); campo.focus(); }
   });
   return caixa;
-}
-
-// ---- Conta Google ------------------------------------------------------------------------
-function iniciais(nome) {
-  return nome.split(' ').filter(Boolean).slice(0, 2).map((p) => p[0].toUpperCase()).join('');
-}
-
-function montarConta(raiz, progresso) {
-  let desenhado = null;
-  function pintar() {
-    const u = progresso.usuario();
-    const estado = (u ? u.uid : '-') + '|' + progresso.nuvemDisponivel();
-    if (estado === desenhado) return;   // marcar aulas não redesenha o menu (que fecharia)
-    desenhado = estado;
-    if (!u) {
-      raiz.replaceChildren(progresso.nuvemDisponivel() ? botaoEntrar(progresso) : '');
-      return;
-    }
-    const avatar = u.foto
-      ? el('img', { class: 'conta-avatar', src: u.foto, alt: '', width: 36, height: 36, referrerpolicy: 'no-referrer' })
-      : el('span', { class: 'conta-avatar' }, iniciais(u.nome));
-    const menu = el('div', { class: 'conta-menu', id: 'conta-menu', hidden: true },
-      el('div', { class: 'conta-menu-nome' }, u.nome),
-      u.email ? el('div', { class: 'conta-menu-email' }, u.email) : el('div', { class: 'conta-menu-email' }),
-      el('button', { class: 'conta-menu-sair', type: 'button', onclick: () => progresso.sair() }, 'Sair'));
-    const botao = el('button', {
-      class: 'conta-avatar-btn', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'conta-menu',
-      'aria-label': 'Minha conta: ' + u.nome,
-      onclick: () => abrir(menu.hidden),
-    }, avatar);
-    function abrir(sim) { menu.hidden = !sim; botao.setAttribute('aria-expanded', String(sim)); }
-    raiz.replaceChildren(botao, menu);
-  }
-  document.addEventListener('click', (ev) => {
-    const menu = raiz.querySelector('.conta-menu');
-    if (menu && !menu.hidden && !raiz.contains(ev.target)) {
-      menu.hidden = true;
-      raiz.querySelector('.conta-avatar-btn').setAttribute('aria-expanded', 'false');
-    }
-  });
-  document.addEventListener('keydown', (ev) => {
-    const menu = raiz.querySelector('.conta-menu');
-    if (ev.key === 'Escape' && menu && !menu.hidden) {
-      menu.hidden = true;
-      const b = raiz.querySelector('.conta-avatar-btn');
-      b.setAttribute('aria-expanded', 'false');
-      b.focus();
-    }
-  });
-  progresso.aoMudar(pintar);
-  pintar();
 }
 
 function montarAviso(progresso) {

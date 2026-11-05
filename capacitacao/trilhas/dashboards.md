@@ -3,6 +3,7 @@ slug: dashboards
 titulo: Dashboards no Gov Hub
 descricao: Do "por que um dashboard" à escolha do gráfico certo, com Apache Superset e Power BI.
 categoria: negocial
+status: oculta
 chamada: Um dashboard ruim some na rotina de quem devia usá-lo. Um dashboard bom muda decisão. Aprenda a construir o seu: dos fundamentos e do design à escolha do gráfico certo, com Apache Superset e Power BI.
 etapas: Por quê=Fundamentos conceituais | O quê=Princípios mínimos de design | Como=Gráficos | Prática=Mão na massa
 etapas_subtitulo: Quatro etapas em sequência: do "por quê" à prática
