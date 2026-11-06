@@ -10,7 +10,6 @@ Para quem acabou de chegar na equipe: o Lab Livre, quem somos, com quem trabalha
 ### Nível 1 · Boas-vindas
 *O que é esta trilha, para que ela serve e como funciona.*
 - [Assistir ao vídeo de onboarding](../onboarding/video-de-onboarding.md) — *Tutorial* · **Essencial**
-- [Salvar o link desta trilha nos favoritos](../onboarding/salvar-a-trilha.md) — *Guia* · **Essencial**
 
 ### Nível 2 · Laboratório
 *O que é o Lab Livre, como funciona, como se organiza e como o Gov Hub faz parte dele.*

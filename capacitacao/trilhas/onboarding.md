@@ -19,7 +19,6 @@ Etapa: Boas-vindas · Ícone: play-circle
 O que é esta trilha, para que ela serve e como funciona.
 
 - [tutorial] **Assistir ao vídeo de onboarding** — core — `docs/onboarding/video-de-onboarding.md`
-- [how-to] **Salvar o link desta trilha nos favoritos** — core — `docs/onboarding/salvar-a-trilha.md`
 
 ## Nível 2 · Laboratório
 Etapa: Laboratório · Ícone: beaker
