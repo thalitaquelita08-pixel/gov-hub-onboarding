@@ -4,8 +4,7 @@
 
 ## Por que preencher
 
-A página de equipe, no Notion, é onde cada pessoa tem o seu perfil. É por ela que o restante do time
-descobre quem você é e com o que trabalha.
+A página de equipe, no Notion, é onde cada pessoa tem o seu perfil.
 
 ## Como fazer
 

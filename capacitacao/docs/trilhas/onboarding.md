@@ -32,7 +32,6 @@ Para quem acabou de chegar na equipe: o Lab Livre, quem somos, com quem trabalha
 *As frentes de trabalho, as pessoas e as responsabilidades de cada time.*
 - [Encontrar o seu time no organograma](../onboarding/organograma.md) — *Referência* · **Essencial**
 - [Entender as responsabilidades do seu time](../onboarding/responsabilidades-do-time.md) — *Guia* · **Essencial**
-- [Combinar com a liderança do seu time](../onboarding/combinar-com-a-referencia.md) — *Guia* · **Essencial**
 - [Preencher o seu perfil na página de equipe](../onboarding/perfil-na-pagina-de-equipe.md) — *Guia* · **Essencial**
 
 ### Nível 6 · Como a gente trabalha

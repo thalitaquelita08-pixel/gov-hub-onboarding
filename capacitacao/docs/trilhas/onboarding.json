@@ -195,16 +195,6 @@
           "icone": "assets/icones/wrench-sober.svg"
         },
         {
-          "id": "onboarding/combinar-com-a-referencia",
-          "titulo": "Combinar com a liderança do seu time",
-          "doc": "docs/onboarding/combinar-com-a-referencia.md",
-          "tipo": "guia",
-          "tipo_nome": "Guia",
-          "papel": "core",
-          "papel_nome": "Essencial",
-          "icone": "assets/icones/wrench-sober.svg"
-        },
-        {
           "id": "onboarding/perfil-na-pagina-de-equipe",
           "titulo": "Preencher o seu perfil na página de equipe",
           "doc": "docs/onboarding/perfil-na-pagina-de-equipe.md",

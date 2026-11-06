@@ -49,7 +49,6 @@ As frentes de trabalho, as pessoas e as responsabilidades de cada time.
 
 - [reference] **Encontrar o seu time no organograma** — core — `docs/onboarding/organograma.md`
 - [how-to] **Entender as responsabilidades do seu time** — core — `docs/onboarding/responsabilidades-do-time.md`
-- [how-to] **Combinar com a liderança do seu time** — core — `docs/onboarding/combinar-com-a-referencia.md`
 - [how-to] **Preencher o seu perfil na página de equipe** — core — `docs/onboarding/perfil-na-pagina-de-equipe.md`
 
 ## Nível 6 · Como a gente trabalha
