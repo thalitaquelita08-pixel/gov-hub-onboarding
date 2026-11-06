@@ -18,13 +18,13 @@ Alguns exemplos do que fica com cada área:
 
 A lista completa de responsabilidades de cada time ainda vai ser adicionada aqui.
 
-## Como fazer
+## Como você vai entender isso
 
-Pergunte à liderança do seu time:
+Você entende o papel do seu time em dois momentos:
 
-1. Pelo que o seu time é responsável.
-2. O que fica com cada pessoa do time.
-3. Como o trabalho do time é organizado e acompanhado.
+1. **Nesta trilha:** você tem a visão geral do que cada área cuida e de como a equipe se organiza.
+2. **No onboarding técnico:** depois desta trilha, você vê os detalhes do seu time: pelo que ele é
+   responsável, o que fica com cada pessoa e como o trabalho é organizado e acompanhado.
 
 Os encontros e os canais que valem para toda a equipe estão na etapa **Como a gente trabalha**.
 
