@@ -2,13 +2,21 @@
   "_aviso": "Gerado por tools/gen_roadmap.py a partir de trilhas/ - nao edite a mao.",
   "slug": "onboarding",
   "titulo": "Onboarding Gov Hub",
-  "descricao": "Para quem acabou de chegar na equipe: o Lab Livre, quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas que você vai usar.",
+  "descricao": "Para quem acabou de chegar na equipe: as ferramentas que você vai usar, o Lab Livre, quem somos, com quem trabalhamos, quem é quem e como a gente se organiza.",
   "categoria": "negocial",
-  "chamada": "Seja bem-vindo(a) ao Gov Hub. Esta trilha te leva pelo essencial em oito etapas: o Lab Livre, quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas que você vai usar. Cada etapa tem tarefas curtas: conclua cada uma e acompanhe aqui o quanto falta.",
+  "chamada": "Seja bem-vindo(a) ao Gov Hub. Esta trilha te leva pelo essencial em oito etapas: as ferramentas que você vai usar, o Lab Livre, quem somos, com quem trabalhamos, quem é quem e como a gente se organiza. Cada etapa tem tarefas curtas: conclua cada uma e acompanhe aqui o quanto falta.",
   "etapas": [
     {
       "rotulo": "Boas-vindas",
       "caixa": "Boas-vindas"
+    },
+    {
+      "rotulo": "Ferramentas",
+      "caixa": "Ferramentas e acessos"
+    },
+    {
+      "rotulo": "Links",
+      "caixa": "Marca e links úteis"
     },
     {
       "rotulo": "Laboratório",
@@ -29,17 +37,9 @@
     {
       "rotulo": "Ritmo",
       "caixa": "Como a gente trabalha"
-    },
-    {
-      "rotulo": "Ferramentas",
-      "caixa": "Ferramentas e acessos"
-    },
-    {
-      "rotulo": "Links",
-      "caixa": "Marca e links úteis"
     }
   ],
-  "etapas_subtitulo": "Oito etapas, no seu ritmo: da chegada às ferramentas do dia a dia",
+  "etapas_subtitulo": "Oito etapas, no seu ritmo: dos acessos ao dia a dia da equipe",
   "niveis": [
     {
       "numero": 1,
@@ -62,6 +62,94 @@
     },
     {
       "numero": 2,
+      "titulo": "Ferramentas e acessos",
+      "descricao": "Notion, Drive, GitHub, Figma e o ambiente de desenvolvimento.",
+      "etapa": "Ferramentas",
+      "icone": "assets/icones/wrench-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/acesso-ao-notion",
+          "titulo": "Ter acesso ao Notion",
+          "doc": "docs/onboarding/acesso-ao-notion.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/acesso-ao-drive",
+          "titulo": "Ter acesso ao Drive",
+          "doc": "docs/onboarding/acesso-ao-drive.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/acesso-ao-github",
+          "titulo": "Ter acesso ao GitHub",
+          "doc": "docs/onboarding/acesso-ao-github.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/acesso-ao-figma",
+          "titulo": "Ter acesso ao Figma",
+          "doc": "docs/onboarding/acesso-ao-figma.md",
+          "tipo": "guia",
+          "tipo_nome": "Guia",
+          "papel": "support",
+          "papel_nome": "Apoio",
+          "icone": "assets/icones/wrench-sober.svg"
+        },
+        {
+          "id": "onboarding/ambiente-de-desenvolvimento",
+          "titulo": "Configurar o ambiente de desenvolvimento",
+          "doc": "docs/onboarding/ambiente-de-desenvolvimento.md",
+          "tipo": "tutorial",
+          "tipo_nome": "Tutorial",
+          "papel": "support",
+          "papel_nome": "Apoio",
+          "icone": "assets/icones/book-open-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Marca e links úteis",
+      "descricao": "Identidade visual, materiais e os links que você vai usar sempre.",
+      "etapa": "Links",
+      "icone": "assets/icones/swatch-sober.svg",
+      "itens": [
+        {
+          "id": "onboarding/identidade-visual",
+          "titulo": "Conhecer a marca e os materiais",
+          "doc": "docs/onboarding/identidade-visual.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/document-text-sober.svg"
+        },
+        {
+          "id": "onboarding/links-uteis",
+          "titulo": "Conhecer os links úteis",
+          "doc": "docs/onboarding/links-uteis.md",
+          "tipo": "referencia",
+          "tipo_nome": "Referência",
+          "papel": "core",
+          "papel_nome": "Essencial",
+          "icone": "assets/icones/document-text-sober.svg"
+        }
+      ]
+    },
+    {
+      "numero": 4,
       "titulo": "Laboratório",
       "descricao": "O que é o Lab Livre, como funciona, como se organiza e como o Gov Hub faz parte dele.",
       "etapa": "Laboratório",
@@ -80,7 +168,7 @@
       ]
     },
     {
-      "numero": 3,
+      "numero": 5,
       "titulo": "Quem somos",
       "descricao": "O Gov Hub: origem, o problema que a gente resolve, missão, metodologia e atuação.",
       "etapa": "Quem somos",
@@ -129,7 +217,7 @@
       ]
     },
     {
-      "numero": 4,
+      "numero": 6,
       "titulo": "Parcerias e projetos",
       "descricao": "Os órgãos parceiros, o que cada projeto faz e em qual deles você vai trabalhar.",
       "etapa": "Parcerias",
@@ -158,7 +246,7 @@
       ]
     },
     {
-      "numero": 5,
+      "numero": 7,
       "titulo": "Times e equipe",
       "descricao": "As frentes de trabalho, as pessoas e as responsabilidades de cada time.",
       "etapa": "Equipe",
@@ -197,7 +285,7 @@
       ]
     },
     {
-      "numero": 6,
+      "numero": 8,
       "titulo": "Como a gente trabalha",
       "descricao": "Reuniões, relatórios e o Telegram do dia a dia.",
       "etapa": "Ritmo",
@@ -259,97 +347,9 @@
           "doc": "docs/onboarding/ritmo-e-alinhamento-semanal.md",
           "tipo": "explicacao",
           "tipo_nome": "Explicação",
-          "papel": "core",
-          "papel_nome": "Essencial",
-          "icone": "assets/icones/light-bulb-sober.svg"
-        }
-      ]
-    },
-    {
-      "numero": 7,
-      "titulo": "Ferramentas e acessos",
-      "descricao": "Notion, Drive, GitHub, Figma e o ambiente de desenvolvimento.",
-      "etapa": "Ferramentas",
-      "icone": "assets/icones/wrench-sober.svg",
-      "itens": [
-        {
-          "id": "onboarding/acesso-ao-notion",
-          "titulo": "Ter acesso ao Notion",
-          "doc": "docs/onboarding/acesso-ao-notion.md",
-          "tipo": "guia",
-          "tipo_nome": "Guia",
-          "papel": "core",
-          "papel_nome": "Essencial",
-          "icone": "assets/icones/wrench-sober.svg"
-        },
-        {
-          "id": "onboarding/acesso-ao-drive",
-          "titulo": "Ter acesso ao Drive",
-          "doc": "docs/onboarding/acesso-ao-drive.md",
-          "tipo": "guia",
-          "tipo_nome": "Guia",
-          "papel": "core",
-          "papel_nome": "Essencial",
-          "icone": "assets/icones/wrench-sober.svg"
-        },
-        {
-          "id": "onboarding/acesso-ao-github",
-          "titulo": "Ter acesso ao GitHub",
-          "doc": "docs/onboarding/acesso-ao-github.md",
-          "tipo": "guia",
-          "tipo_nome": "Guia",
-          "papel": "core",
-          "papel_nome": "Essencial",
-          "icone": "assets/icones/wrench-sober.svg"
-        },
-        {
-          "id": "onboarding/acesso-ao-figma",
-          "titulo": "Ter acesso ao Figma",
-          "doc": "docs/onboarding/acesso-ao-figma.md",
-          "tipo": "guia",
-          "tipo_nome": "Guia",
-          "papel": "support",
-          "papel_nome": "Apoio",
-          "icone": "assets/icones/wrench-sober.svg"
-        },
-        {
-          "id": "onboarding/ambiente-de-desenvolvimento",
-          "titulo": "Configurar o ambiente de desenvolvimento",
-          "doc": "docs/onboarding/ambiente-de-desenvolvimento.md",
-          "tipo": "tutorial",
-          "tipo_nome": "Tutorial",
-          "papel": "support",
-          "papel_nome": "Apoio",
-          "icone": "assets/icones/book-open-sober.svg"
-        }
-      ]
-    },
-    {
-      "numero": 8,
-      "titulo": "Marca e links úteis",
-      "descricao": "Identidade visual, materiais e os links que você vai usar sempre.",
-      "etapa": "Links",
-      "icone": "assets/icones/swatch-sober.svg",
-      "itens": [
-        {
-          "id": "onboarding/identidade-visual",
-          "titulo": "Conhecer a marca e os materiais",
-          "doc": "docs/onboarding/identidade-visual.md",
-          "tipo": "referencia",
-          "tipo_nome": "Referência",
-          "papel": "core",
-          "papel_nome": "Essencial",
-          "icone": "assets/icones/document-text-sober.svg"
-        },
-        {
-          "id": "onboarding/links-uteis",
-          "titulo": "Conhecer os links úteis",
-          "doc": "docs/onboarding/links-uteis.md",
-          "tipo": "referencia",
-          "tipo_nome": "Referência",
           "papel": "capstone",
           "papel_nome": "Capstone",
-          "icone": "assets/icones/document-text-sober.svg"
+          "icone": "assets/icones/light-bulb-sober.svg"
         }
       ]
     }

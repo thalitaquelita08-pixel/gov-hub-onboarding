@@ -61,11 +61,18 @@
     {
       "slug": "onboarding",
       "titulo": "Onboarding Gov Hub",
-      "descricao": "Para quem acabou de chegar na equipe: o Lab Livre, quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas que você vai usar.",
+      "descricao": "Para quem acabou de chegar na equipe: as ferramentas que você vai usar, o Lab Livre, quem somos, com quem trabalhamos, quem é quem e como a gente se organiza.",
       "categoria": "negocial",
       "niveis": 8,
       "aulas": [
         "onboarding/video-de-onboarding",
+        "onboarding/acesso-ao-notion",
+        "onboarding/acesso-ao-drive",
+        "onboarding/acesso-ao-github",
+        "onboarding/acesso-ao-figma",
+        "onboarding/ambiente-de-desenvolvimento",
+        "onboarding/identidade-visual",
+        "onboarding/links-uteis",
         "onboarding/conhecer-o-lab-livre",
         "onboarding/de-onde-a-gente-vem",
         "onboarding/missao-visao-e-valores",
@@ -81,14 +88,7 @@
         "onboarding/se-apresentar",
         "onboarding/grade-horaria",
         "onboarding/agenda-coletiva",
-        "onboarding/ritmo-e-alinhamento-semanal",
-        "onboarding/acesso-ao-notion",
-        "onboarding/acesso-ao-drive",
-        "onboarding/acesso-ao-github",
-        "onboarding/acesso-ao-figma",
-        "onboarding/ambiente-de-desenvolvimento",
-        "onboarding/identidade-visual",
-        "onboarding/links-uteis"
+        "onboarding/ritmo-e-alinhamento-semanal"
       ]
     },
     {

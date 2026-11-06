@@ -5,7 +5,7 @@
 ## Comece por aqui
 
 O vídeo de onboarding dá a visão geral do projeto. As próximas etapas desta trilha aprofundam cada
-parte: quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas.
+parte: as ferramentas, quem somos, com quem trabalhamos, quem é quem e como a gente se organiza.
 
 <video src="../../assets/video/gov-hub.mp4" controls preload="metadata" playsinline aria-label="Vídeo de apresentação do Gov Hub"></video>
 
