@@ -7,8 +7,7 @@
 O vídeo de onboarding dá a visão geral do projeto. As próximas etapas desta trilha aprofundam cada
 parte: quem somos, com quem trabalhamos, quem é quem, como a gente se organiza e as ferramentas.
 
-O link do vídeo vai ser adicionado aqui. Enquanto isso, peça para a gestão no tópico **Geral** do
-Telegram.
+<video src="../../assets/video/gov-hub.mp4" controls preload="metadata" playsinline aria-label="Vídeo de apresentação do Gov Hub"></video>
 
 ## Como esta trilha funciona
 

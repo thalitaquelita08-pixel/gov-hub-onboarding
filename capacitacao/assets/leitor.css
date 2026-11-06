@@ -51,6 +51,7 @@ body.sem-nivel .layout{grid-template-columns:minmax(0,1fr);max-width:920px}   /*
 .conteudo tbody tr:nth-child(even){background:var(--bg-soft)}
 .conteudo hr{border:0;border-top:1px solid var(--border-soft);margin:1.8em 0}
 .conteudo img{max-width:100%;height:auto}
+.conteudo video{display:block;width:100%;height:auto;margin:1.4em 0;border-radius:var(--radius-md);background:#000}
 .conteudo ul,.conteudo ol{padding-left:1.5em}
 .conteudo figure{margin:1.4em 0;text-align:center}
 .conteudo figure img{display:block;margin:0 auto;max-height:560px;width:auto;border-radius:var(--radius-md)}

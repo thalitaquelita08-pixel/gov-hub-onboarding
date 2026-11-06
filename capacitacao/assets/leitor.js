@@ -52,10 +52,10 @@ function corrigirLinks(raiz, path) {
     if (r.endsWith('/')) r += 'index.md';
     a.setAttribute('href', r.endsWith('.md') ? 'doc.html?trilha=' + encodeURIComponent(slug) + '&path=' + r + frag : r + busca + frag);
   });
-  raiz.querySelectorAll('img[src]').forEach((img) => {
-    const s = img.getAttribute('src');
+  raiz.querySelectorAll('img[src],video[src]').forEach((midia) => {
+    const s = midia.getAttribute('src');
     if (!s || /^[a-z]+:/i.test(s) || s.startsWith('/')) return;
-    img.setAttribute('src', resolver(path, s));
+    midia.setAttribute('src', resolver(path, s));
   });
 }
 
