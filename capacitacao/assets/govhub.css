@@ -135,15 +135,14 @@ header.site{position:sticky;top:0;z-index:50}
 
 /* ---------- Hero ---------- */
 /* Mesmo hero das páginas do site (Sobre, Projetos…): fundo branco, título navy à esquerda,
-   anel navy à direita, pílula #F2F1F6 entrando pela esquerda. */
+   pílula #F2F1F6 entrando pela esquerda. */
 .hero,.landing-hero{position:relative;overflow:hidden;background:#fff;color:var(--text-body);
     padding:clamp(48px,7vw,96px) 0 clamp(48px,6vw,80px);text-align:left;
     background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%230A005A' fill-rule='evenodd' d='M50 0a50 50 0 1 0 0 100a50 50 0 1 0 0-100zM50 25.6a24.4 24.4 0 1 1 0 48.8a24.4 24.4 0 1 1 0-48.8z'/%3E%3C/svg%3E"),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 266 100'%3E%3Crect width='266' height='100' rx='50' fill='%23F2F1F6'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
-    background-size:min(10vw,140px) auto,210px auto;
-    background-position:right min(24vw,320px) bottom 24px,left -72px top 18px}
+    background-size:210px auto;
+    background-position:left -72px top 18px}
 .hero-inner,.landing-hero-inner{max-width:var(--largura);margin:0 auto;padding:0 24px;text-align:left}
 .hero-inner>*,.landing-hero-inner>*{max-width:min(680px,60%)}
 .hero h1,.landing-hero h1{font-size:clamp(34px,5vw,64px);color:var(--dark-navy);margin-bottom:20px}
