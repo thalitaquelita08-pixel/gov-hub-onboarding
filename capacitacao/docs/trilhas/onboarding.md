@@ -12,11 +12,15 @@ Para quem acabou de chegar na equipe: as ferramentas que você vai usar, o Lab L
 - [Assistir ao vídeo de onboarding](../onboarding/video-de-onboarding.md) — *Tutorial* · **Essencial**
 
 ### Nível 2 · Ferramentas e acessos
-*Notion, Drive, GitHub, Figma e o ambiente de desenvolvimento.*
-- [Ter acesso ao Notion](../onboarding/acesso-ao-notion.md) — *Guia* · **Essencial**
-- [Ter acesso ao Drive](../onboarding/acesso-ao-drive.md) — *Guia* · **Essencial**
-- [Ter acesso ao GitHub](../onboarding/acesso-ao-github.md) — *Guia* · **Essencial**
-- [Ter acesso ao Figma](../onboarding/acesso-ao-figma.md) — *Guia* · Apoio
+*Notion e a página de equipe, Drive, GitHub, Figma, Telegram, agenda coletiva, grade horária e o ambiente de desenvolvimento.*
+- [Navegar no Notion](../onboarding/acesso-ao-notion.md) — *Guia* · **Essencial**
+- [Preencher o seu perfil na página de equipe](../onboarding/perfil-na-pagina-de-equipe.md) — *Guia* · **Essencial**
+- [Navegar no Drive](../onboarding/acesso-ao-drive.md) — *Guia* · **Essencial**
+- [Navegar no GitHub](../onboarding/acesso-ao-github.md) — *Guia* · **Essencial**
+- [Navegar no Figma](../onboarding/acesso-ao-figma.md) — *Guia* · Apoio
+- [Entrar no grupo do Telegram](../onboarding/entrar-no-telegram.md) — *Guia* · **Essencial**
+- [Entrar na agenda coletiva do Google](../onboarding/agenda-coletiva.md) — *Guia* · **Essencial**
+- [Preencher a planilha de grade horária](../onboarding/grade-horaria.md) — *Guia* · **Essencial**
 - [Configurar o ambiente de desenvolvimento](../onboarding/ambiente-de-desenvolvimento.md) — *Tutorial* · Apoio
 
 ### Nível 3 · Marca e links úteis
@@ -30,28 +34,23 @@ Para quem acabou de chegar na equipe: as ferramentas que você vai usar, o Lab L
 
 ### Nível 5 · Quem somos
 *O Gov Hub: origem, o problema que a gente resolve, missão, metodologia e atuação.*
-- [De onde a gente vem e que problema resolve](../onboarding/de-onde-a-gente-vem.md) — *Explicação* · **Essencial**
+- [De onde a gente vem e que problema resolve?](../onboarding/de-onde-a-gente-vem.md) — *Explicação* · **Essencial**
 - [Missão, visão e valores](../onboarding/missao-visao-e-valores.md) — *Explicação* · **Essencial**
 - [Metodologia e atuação do Gov Hub](../onboarding/metodologia-e-atuacao.md) — *Explicação* · **Essencial**
-- [Documento base dos projetos](../onboarding/documento-base-dos-projetos.md) — *Referência* · **Essencial**
 
 ### Nível 6 · Parcerias e projetos
-*Os órgãos parceiros, o que cada projeto faz e em qual deles você vai trabalhar.*
+*Os órgãos parceiros, o que cada projeto faz e onde se aprofundar no seu.*
 - [Os cinco projetos com parceiros](../onboarding/projetos-com-parceiros.md) — *Explicação* · **Essencial**
-- [Saber em qual projeto você vai atuar](../onboarding/seu-projeto.md) — *Guia* · **Essencial**
+- [Conhecer a fundo o seu projeto](../onboarding/seu-projeto.md) — *Guia* · **Essencial**
 
 ### Nível 7 · Times e equipe
 *As frentes de trabalho, as pessoas e as responsabilidades de cada time.*
 - [Encontrar o seu time no organograma](../onboarding/organograma.md) — *Referência* · **Essencial**
 - [Entender as responsabilidades do seu time](../onboarding/responsabilidades-do-time.md) — *Guia* · **Essencial**
-- [Preencher o seu perfil na página de equipe](../onboarding/perfil-na-pagina-de-equipe.md) — *Guia* · **Essencial**
 
 ### Nível 8 · Como a gente trabalha
-*Reuniões, relatórios e o Telegram do dia a dia.*
-- [Entrar no grupo do Telegram](../onboarding/entrar-no-telegram.md) — *Guia* · **Essencial**
+*Os tópicos do Telegram, a sua apresentação à equipe, as reuniões e os relatórios.*
 - [Seguir o Geral e os tópicos do seu time e do seu projeto](../onboarding/topicos-do-telegram.md) — *Referência* · **Essencial**
 - [Se apresentar no tópico Geral](../onboarding/se-apresentar.md) — *Guia* · **Essencial**
-- [Preencher a planilha de grade horária](../onboarding/grade-horaria.md) — *Guia* · **Essencial**
-- [Entrar na agenda coletiva do Google](../onboarding/agenda-coletiva.md) — *Guia* · **Essencial**
 - [Participar do seu primeiro alinhamento semanal](../onboarding/ritmo-e-alinhamento-semanal.md) — *Explicação* · **Capstone**
 

@@ -12,8 +12,6 @@ Para quem vai mexer com código e dados. A configuração é feita com a ajuda d
 
 ## Como fazer
 
-1. Tenha acesso ao GitHub (tarefa anterior).
-2. Combine com alguém do seu time um horário para configurar o ambiente juntos.
-3. Dúvidas vão no tópico **Configuração de ambiente** do Telegram.
+1. Combine com alguém do seu time um horário para configurar o ambiente juntos.
 
 Quando terminar, clique em **Concluir e avançar**.

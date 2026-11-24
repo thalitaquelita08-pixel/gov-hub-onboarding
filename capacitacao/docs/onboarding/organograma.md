@@ -5,7 +5,8 @@
 ## Nossas frentes de trabalho
 
 Gestão · Estratégia · Governança · Metodologia · Políticas Públicas · Comunidade · Comunicação ·
-Gestão do Conhecimento · Técnica · Produto
+Gestão do Conhecimento · Engenharia de Dados · Ciência de Dados · Arquitetura e Infraestrutura ·
+Cibersegurança · Produto · Design
 
 Alguns times e pessoas atuam de forma transversal, em mais de uma frente. Você também pode colaborar
 em outras frentes quando quiser: a colaboração de todos é o que aprimora o projeto como um todo.

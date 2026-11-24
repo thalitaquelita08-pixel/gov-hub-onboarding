@@ -1,4 +1,4 @@
-# Saber em qual projeto você vai atuar
+# Conhecer a fundo o seu projeto
 
 > Tipo: **Guia**
 
@@ -8,13 +8,13 @@
 
 ## Por que isso importa
 
-Cada projeto tem o seu tópico no Telegram, o seu escopo e as suas pessoas de referência. Saber onde
-você vai atuar ajuda a escolher o que acompanhar desde o primeiro dia.
+Você já sabe em qual projeto vai atuar. Agora é hora de conhecer bem o escopo, as entregas e as pessoas
+de referência dele.
 
 ## Como fazer
 
-1. Releia a tarefa **Os cinco projetos com parceiros**.
-2. Combine com a liderança do seu time em qual projeto (ou projetos) você vai atuar.
-3. Anote o nome do projeto: você vai usá-lo para seguir os tópicos certos no Telegram.
+1. Leia a página do seu projeto no Notion: [Abrir os projetos](https://app.notion.com/p/bp-ccsl/Parcerias-2e830ee028a580979585eea017d6e358).
+2. Navegue pela pasta do seu projeto no [Drive](https://drive.google.com/drive/u/0/folders/1DOUyTLNXfkj27HjIKotOkBhdZtlpaCGH).
+3. Se você mexe com código e dados, abra os repositórios do projeto no [GitHub](https://github.com/GovHub-br).
 
 Quando terminar, clique em **Concluir e avançar**.

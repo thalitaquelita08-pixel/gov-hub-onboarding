@@ -22,12 +22,16 @@ O que é esta trilha, para que ela serve e como funciona.
 
 ## Nível 2 · Ferramentas e acessos
 Etapa: Ferramentas · Ícone: wrench
-Notion, Drive, GitHub, Figma e o ambiente de desenvolvimento.
+Notion e a página de equipe, Drive, GitHub, Figma, Telegram, agenda coletiva, grade horária e o ambiente de desenvolvimento.
 
-- [how-to] **Ter acesso ao Notion** — core — `docs/onboarding/acesso-ao-notion.md`
-- [how-to] **Ter acesso ao Drive** — core — `docs/onboarding/acesso-ao-drive.md`
-- [how-to] **Ter acesso ao GitHub** — core — `docs/onboarding/acesso-ao-github.md`
-- [how-to] **Ter acesso ao Figma** — support — `docs/onboarding/acesso-ao-figma.md`
+- [how-to] **Navegar no Notion** — core — `docs/onboarding/acesso-ao-notion.md`
+- [how-to] **Preencher o seu perfil na página de equipe** — core — `docs/onboarding/perfil-na-pagina-de-equipe.md`
+- [how-to] **Navegar no Drive** — core — `docs/onboarding/acesso-ao-drive.md`
+- [how-to] **Navegar no GitHub** — core — `docs/onboarding/acesso-ao-github.md`
+- [how-to] **Navegar no Figma** — support — `docs/onboarding/acesso-ao-figma.md`
+- [how-to] **Entrar no grupo do Telegram** — core — `docs/onboarding/entrar-no-telegram.md`
+- [how-to] **Entrar na agenda coletiva do Google** — core — `docs/onboarding/agenda-coletiva.md`
+- [how-to] **Preencher a planilha de grade horária** — core — `docs/onboarding/grade-horaria.md`
 - [tutorial] **Configurar o ambiente de desenvolvimento** — support — `docs/onboarding/ambiente-de-desenvolvimento.md`
 
 ## Nível 3 · Marca e links úteis
@@ -47,17 +51,16 @@ O que é o Lab Livre, como funciona, como se organiza e como o Gov Hub faz parte
 Etapa: Quem somos · Ícone: heart
 O Gov Hub: origem, o problema que a gente resolve, missão, metodologia e atuação.
 
-- [explanation] **De onde a gente vem e que problema resolve** — core — `docs/onboarding/de-onde-a-gente-vem.md`
+- [explanation] **De onde a gente vem e que problema resolve?** — core — `docs/onboarding/de-onde-a-gente-vem.md`
 - [explanation] **Missão, visão e valores** — core — `docs/onboarding/missao-visao-e-valores.md`
 - [explanation] **Metodologia e atuação do Gov Hub** — core — `docs/onboarding/metodologia-e-atuacao.md`
-- [reference] **Documento base dos projetos** — core — `docs/onboarding/documento-base-dos-projetos.md`
 
 ## Nível 6 · Parcerias e projetos
 Etapa: Parcerias · Ícone: rectangle-group
-Os órgãos parceiros, o que cada projeto faz e em qual deles você vai trabalhar.
+Os órgãos parceiros, o que cada projeto faz e onde se aprofundar no seu.
 
 - [explanation] **Os cinco projetos com parceiros** — core — `docs/onboarding/projetos-com-parceiros.md`
-- [how-to] **Saber em qual projeto você vai atuar** — core — `docs/onboarding/seu-projeto.md`
+- [how-to] **Conhecer a fundo o seu projeto** — core — `docs/onboarding/seu-projeto.md`
 
 ## Nível 7 · Times e equipe
 Etapa: Equipe · Ícone: square-2-stack
@@ -65,15 +68,11 @@ As frentes de trabalho, as pessoas e as responsabilidades de cada time.
 
 - [reference] **Encontrar o seu time no organograma** — core — `docs/onboarding/organograma.md`
 - [how-to] **Entender as responsabilidades do seu time** — core — `docs/onboarding/responsabilidades-do-time.md`
-- [how-to] **Preencher o seu perfil na página de equipe** — core — `docs/onboarding/perfil-na-pagina-de-equipe.md`
 
 ## Nível 8 · Como a gente trabalha
 Etapa: Ritmo · Ícone: clipboard-document-list
-Reuniões, relatórios e o Telegram do dia a dia.
+Os tópicos do Telegram, a sua apresentação à equipe, as reuniões e os relatórios.
 
-- [how-to] **Entrar no grupo do Telegram** — core — `docs/onboarding/entrar-no-telegram.md`
 - [reference] **Seguir o Geral e os tópicos do seu time e do seu projeto** — core — `docs/onboarding/topicos-do-telegram.md`
 - [how-to] **Se apresentar no tópico Geral** — core — `docs/onboarding/se-apresentar.md`
-- [how-to] **Preencher a planilha de grade horária** — core — `docs/onboarding/grade-horaria.md`
-- [how-to] **Entrar na agenda coletiva do Google** — core — `docs/onboarding/agenda-coletiva.md`
 - [explanation] **Participar do seu primeiro alinhamento semanal** — capstone — `docs/onboarding/ritmo-e-alinhamento-semanal.md`
